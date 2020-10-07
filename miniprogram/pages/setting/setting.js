@@ -93,22 +93,18 @@ Page({
   /**
    * 收藏页面
    */
-  bindGetMyCollection: function() {
+  bindguanyuwomen: function() {
     wx.navigateTo({
-      url: '../personalCollection/personalCollection'
+      url: '../guanyuwomen/guanyuwomen'
     })
   },
 
-  bindGetMyCoursePage: function () {
+  bindyonghuxieyi: function () {
     wx.navigateTo({
-      url: '../myCourse/myCourse'
+      url: '../yonghuxieyi/yonghuxieyi'
     })
   },
 
-  bindsetting: function () {
-    wx.navigateTo({
-      url: '../setting/setting'
-    })
-  }
+  
 
 })
