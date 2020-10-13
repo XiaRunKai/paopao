@@ -34,7 +34,23 @@ page {
   justify-content: center;
   color: #fff;
 }
+.content-icon {
+  width: 20px;
+  /* background-color: #2fdf17; */
+}
 
+.content-icon image {
+  width: 20px;
+  height: 20px;
+  /* background-color: #2fdf17; */
+}
+
+.content-text {
+  height: 80rpx;
+  margin-left: 12rpx;
+  margin-top: 0rpx;
+
+}
 .usermotto {
   margin-top: 130px;
 }
@@ -47,7 +63,10 @@ page {
   padding: 20rpx;
   flex-direction: column;
 }
-
+.it{
+  display: flex;
+  flex-flow: row;
+}
 .item-wrapper {
   width: 95%;
   height: 60rpx;
@@ -55,6 +74,7 @@ page {
   line-height: 60rpx;
   font-size: 30rpx;
   display: flex;
+  flex-flow: row;
   flex-direction: row;
   align-items: baseline;
   justify-content: space-between;

@@ -93,9 +93,14 @@ Page({
   /**
    * 收藏页面
    */
-  bindGetMyCollection: function() {
+  bindGetcredits: function() {
     wx.navigateTo({
-      url: '../personalCollection/personalCollection'
+      url: '../credits/credits'
+    })
+  },
+  bindGetpurse: function() {
+    wx.navigateTo({
+      url: '../purse/purse'
     })
   },
 
@@ -104,6 +109,12 @@ Page({
       url: '../myCourse/myCourse'
     })
   },
+  bindkefu: function() {
+    wx.navigateTo({
+      url: '../kefu/kefu'
+    })
+  },
+
 
   bindsetting: function () {
     wx.navigateTo({

@@ -13,7 +13,7 @@
     <view id='top-bar-right'>
       <view bindtap='goSearchByLocPage' id='search-by-location'>
         <i class="iconfont icon-sousuo-copy" style="fontsize:20rpx;"></i>
-        查询行程
+        查询订单
       </view>
     </view>
   </view>
@@ -22,7 +22,7 @@
     <view class='course-total-top'>
       <label style='font-size:32rpx;font-weight:bold;'>
         <i class="iconfont icon-tongji" style="fontsize:20rpx;color:#00b26a"></i>
-        行程汇总
+        订单汇总
       </label>
       <label>></label>
     </view>
@@ -37,14 +37,14 @@
   <view class='menu-bar'>
     <view class='menu-title'>
       <i class="iconfont icon-fujin" style="fontsize:20rpx;color:#00b26a"></i>
-      附近车主
+      附近跑跑员
     </view>
 
     <view class='switch-btn-wrapper'>
-      <label id='passengerNearby' class='cur-menu' bindtap='bindGetPassengerNearby' wx:if="{{showType == 0}}">乘客</label>
-      <label id='passengerNearby' bindtap='bindGetPassengerNearby' wx:else>乘客</label>
-      <label id='driverNearby' class='cur-menu' bindtap='bindGetDriverNearby' wx:if="{{showType == 1}}">车主</label>
-      <label id='driverNearby' bindtap='bindGetDriverNearby' wx:else>车主</label>
+      <label id='passengerNearby' class='cur-menu' bindtap='bindGetPassengerNearby' wx:if="{{showType == 0}}">用户</label>
+      <label id='passengerNearby' bindtap='bindGetPassengerNearby' wx:else>用户</label>
+      <label id='driverNearby' class='cur-menu' bindtap='bindGetDriverNearby' wx:if="{{showType == 1}}">跑跑员</label>
+      <label id='driverNearby' bindtap='bindGetDriverNearby' wx:else>跑跑员</label>
     </view>
   </view>
 

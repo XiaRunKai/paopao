@@ -1,0 +1,8 @@
+/* pages/kefu/what/what.wxss */
+.title{
+  font-size: large;
+}
+.content{
+  margin-top: 1cm;
+  font-size:small;
+}
