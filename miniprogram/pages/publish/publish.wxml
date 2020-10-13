@@ -4,10 +4,10 @@
   <view id='passenger' bindtap='passengerPublish'>
     <i class="iconfont icon-chengke" style="font-size:88rpx;color:#fff"></i>
   </view>
-  <label>乘客</label>
+  <label>用户</label>
 
   <view id='driver' bindtap='driverPublish'>
     <i class="iconfont icon-qiche-copy" style="font-size:96rpx;color:#fff"></i>
   </view>
-  <label>车主</label>
+  <label>跑跑员</label>
 </view>

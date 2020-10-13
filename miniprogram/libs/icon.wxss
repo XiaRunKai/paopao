@@ -58,4 +58,6 @@
 .icon-guanyuwomen:before { content: "\e682"; }
 
 .icon-shijian:before { content: "\e611"; }
+.icon-chongzhi:before { content: "\e654"; }
 
+.icon-jiantou::before { content: "\e611"; }
