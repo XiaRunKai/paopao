@@ -20,7 +20,7 @@
         "uploadWithSourceMap": true,
         "compileHotReLoad": false,
         "useMultiFrameRuntime": false,
-        "useApiHook": false,
+        "useApiHook": true,
         "babelSetting": {
             "ignore": [],
             "disablePlugins": [],
@@ -32,7 +32,7 @@
         "packNpmManually": false,
         "packNpmRelationList": []
     },
-    "appid": "wx30798b291766b335",
+    "appid": "wx23ecbc696d24af9d",
     "projectname": "paopao",
     "libVersion": "2.2.5",
     "simulatorType": "wechat",
