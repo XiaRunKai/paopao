@@ -4,6 +4,7 @@
     "pages/personal/personal",
     "pages/publishMsg/publishMsg",
     "pages/publish/publish",
+    "pages/kefu/kefu",
     "pages/courseDetail/courseDetail",
     "pages/courseSearch/courseSearch",
     "pages/courseSearch/courseSearchByLoc",
@@ -17,7 +18,7 @@
     "backgroundColor": "#7A7A7A",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "同城老乡拼车",
+    "navigationBarTitleText": "跑跑",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {

@@ -1,0 +1,40 @@
+<!--pages/kefu/kefu.wxml-->
+<view class='head'>常见问题</view>
+<view class="table">
+   <view class="td1" style="flex-item">配送问题 </view>
+   <view class="td2" style="flex-item">
+    <view class="tr21" bindtap='bindwhat'>跑跑都可以送什么物品</view>
+    <view class="tr22">跑跑的运营范围是多远</view> 
+    <view class="tr23">跑跑可以配送多少重量、体积的商品</view>
+   </view>
+</view>
+<view class="table">
+   <view class="td1" style="flex-item">订单问题 </view>
+   <view class="td2" style="flex-item">
+    <view class="tr21">联系不到跑跑员怎么办</view>
+    <view class="tr22">跑跑服务时间</view> 
+   </view>
+</view>
+<view class="table">
+   <view class="td1" style="flex-item">加盟合作 </view>
+   <view class="td2" style="flex-item">
+    <view class="tr21">如何成为跑跑员</view>
+    <view class="tr22">商家合作</view> 
+    <view class="tr23">加盟或者代理</view>
+   </view>
+</view>
+<view class="table">
+   <view class="td1" style="flex-item">下单问题 </view>
+   <view class="td2" style="flex-item">
+    <view class="tr21">下单地址如何填写</view>
+    <view class="tr22">下单后如何取消订单</view> 
+    <view class="tr23">下单后如何修改订单信息</view>
+   </view>
+</view>
+    <view class='time'>服务时间7*24小时</view>
+<!-- /* 底部导航栏 */ -->
+<view class="footerBar">
+
+    <view class="footer-right float-right" data-phone="{{charge.phone}}" bindtap="Appointment">联系客服</view>
+</view>
+

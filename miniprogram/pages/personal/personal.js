@@ -104,7 +104,11 @@ Page({
       url: '../myCourse/myCourse'
     })
   },
-
+  bindkefu: function() {
+    wx.navigateTo({
+      url: '../kefu/kefu'
+    })
+  },
   bindGoAboutUs: function () {
     wx.navigateTo({
       url: '../aboutUs/aboutUs'

@@ -34,6 +34,24 @@
       </view>
       <label>></label>
     </view>
+
+  <view bindtap='bindkefu' class='item-wrapper'>
+    <view class='it'>
+      <view class="content-icon float-left">
+			<image src="../../images/kefu.png"></image>
+		  </view>
+      <view class="content-text ">我的委托</view>
+    </view>
+    <label>></label>
   </view>
-  
+ </view>
 </view>
+    <!--客服
+    <view bindtap='bindkefu' class='item-wrapper'>
+    <view><view class="content-icon float-left">
+			<image src="../../images/kefu.png"></image></view>
+      		<view class="content-text  font-size-14">客服</view>
+    </view>
+    <label>></label>
+    </view>   --> 
+
