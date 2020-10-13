@@ -11,15 +11,16 @@
       <view>
         <i class="iconfont icon-xingzhuanggongnengtubiao-" style="fontsize:20rpx;color:#00b26a;"></i>我的收藏
       </view>
-      
       <label>></label>
     </view>
+
     <view bindtap='bindGetMyCoursePage' class='item-wrapper'>
       <view>
         <i class="iconfont icon-flagfold" style="fontsize:20rpx;color:#00b26a;"></i>我的行程
       </view>
       <label>></label>
     </view>
+    
     <!-- 安全须知 -->
     <view class='item-wrapper'>
       <view>
@@ -28,9 +29,9 @@
       <label>></label>
     </view>
     
-    <view bindtap='bindGoAboutUs' class='item-wrapper'>
+    <view bindtap='bindsetting' class='item-wrapper'>
       <view>
-        <i class="iconfont icon-guanyuwomen" style="fontsize:20rpx;color:#00b26a;"></i>关于我们
+        <i class="iconfont icon-guanyuwomen" style="fontsize:20rpx;color:#00b26a;"></i>设置
       </view>
       <label>></label>
     </view>

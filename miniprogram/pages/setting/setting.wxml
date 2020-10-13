@@ -1,0 +1,14 @@
+
+<view bindtap='bindguanyuwomen' class='item-wrapper'>
+    <view>
+     关于我们
+    </view>
+    <label>></label>
+</view>
+
+<view bindtap='bindyonghuxieyi' class='item-wrapper'>
+    <view>
+     用户协议
+    </view>
+      <label>></label>
+</view>
