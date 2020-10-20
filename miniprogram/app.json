@@ -1,18 +1,21 @@
 {
   "pages": [
+    "pages/denglu/denglu",
+    "pages/publish/publish",
+
     "pages/index/index",
     "pages/personal/personal",
     "pages/publishMsg/publishMsg",
-    "pages/publish/publish",
+
     "pages/kefu/kefu",
     "pages/courseDetail/courseDetail",
     "pages/courseSearch/courseSearch",
     "pages/courseSearch/courseSearchByLoc",
     "pages/personalCollection/personalCollection",
     "pages/pubMsgOfDriver/pubMsgOfDriver",
-    "pages/myCourse/myCourse",
     "pages/aboutUs/aboutUs",
-    "pages/nav/nav"
+    "pages/nav/nav",
+    "pages/zhuce/zhuce"
   ],
   "window": {
     "backgroundColor": "#7A7A7A",

@@ -1,13 +1,13 @@
 <view id='mainWrapper'>
-  <label id='pageTitle'>一键发布行程</label>
-  <label id='chooseTitle'>选择身份</label>
+  <label id='pageTitle'>一键发布跑腿订单</label>
+  <!-- <label id='chooseTitle'>选择身份</label>
   <view id='passenger' bindtap='passengerPublish'>
     <i class="iconfont icon-chengke" style="font-size:88rpx;color:#fff"></i>
   </view>
-  <label>用户</label>
+  <label>用户</label> -->
 
   <view id='driver' bindtap='driverPublish'>
     <i class="iconfont icon-qiche-copy" style="font-size:96rpx;color:#fff"></i>
   </view>
-  <label>跑跑员</label>
+  <label>我要下单</label>
 </view>

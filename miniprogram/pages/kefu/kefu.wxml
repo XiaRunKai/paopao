@@ -1,4 +1,4 @@
-<!--pages/kefu/kefu.wxml-->
+ <!--pages/kefu/kefu.wxml-->
 <view class='head'>常见问题</view>
 <view class="table">
    <view class="td1" style="flex-item">配送问题 </view>

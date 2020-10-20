@@ -13,13 +13,14 @@
       </view>
       <label>></label>
     </view>
-
+<!--
     <view bindtap='bindGetMyCoursePage' class='item-wrapper'>
       <view>
         <i class="iconfont icon-flagfold" style="fontsize:20rpx;color:#00b26a;"></i>我的行程
       </view>
       <label>></label>
     </view>
+-->
     
     <!-- 安全须知 -->
     <view class='item-wrapper' bindtap='bindGetpurse'>
@@ -41,7 +42,7 @@
       <view class="content-icon float-left">
 			<image src="../../images/kefu.png"></image>
 		  </view>
-      <view class="content-text ">我的委托</view>
+      <view class="content-text ">客服</view>
     </view>
     <label>></label>
   </view>

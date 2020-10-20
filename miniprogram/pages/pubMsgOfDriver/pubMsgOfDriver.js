@@ -144,7 +144,7 @@ Page({
         wx.showModal({
           title: '提示',
           showCancel: false,
-          content: '请完善拼车信息！'
+          content: '您还有未填写的信息哦~'
         });
         break;
       }

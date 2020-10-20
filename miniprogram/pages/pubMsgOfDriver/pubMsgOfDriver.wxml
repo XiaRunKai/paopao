@@ -23,7 +23,7 @@
           <input bindfocus='bindSelectEnd' class='point-input' id='end' name="end" value='{{endAddressInfo.address}}' placeholder='点击选择终点'/>
       </view>
     </view>
-    <!-- 车辆信息 -->
+    <!-- 车辆信息
     <view class='input-area'>
       <view class="input-wrapper">
         <label>车辆信息：</label>
@@ -33,11 +33,11 @@
         <label>车牌号：</label>
         <input name="carNum" placeholder='请输入车牌号'></input>  
       </view>
-    </view>
+    </view> -->
 
     <!-- 人数价格 -->
     <view class='input-area'>
-      <view class="input-wrapper">
+      <!-- <view class="input-wrapper">
         <label>余座：</label>
         <picker name="surplusSeat" bindchange="bindNumChange" value='{{index}}' mode="selector" range="{{searRange}}" style='height:35px;flex: 1; text-align: right;padding-right: 20rpx;'>
           <view class="picker" wx:if="{{index == -1}}">
@@ -47,9 +47,9 @@
             {{searRange[index]}}
           </view>
         </picker>
-      </view>
+      </view> -->
       <view class="input-wrapper">
-          <label>价格/人</label>
+          <label>价格</label>
           <input style='height:35px;flex: 1; text-align: right;padding-right: 20rpx;' type='number' name="price" placeholder='点击输入'/>
       </view>  
     </view>
@@ -58,7 +58,7 @@
     <view class="input-wrapper" id="datetimeWrapper">     
       <view id='date' class='datetime'>
         <!-- 日期 -->
-        <label style='display:inline-block'>日期：</label>
+        <label style='display:inline-block'>预期日期：</label>
         <picker name="date" mode="date" value="{{date}}" start="2018-09-01" end="" bindchange="bindDateChange">
           <view class="picker" wx:if="{{date == ''}}">
             请选择 >
@@ -70,7 +70,7 @@
       </view>
       <view id='time' class='datetime'>
         <!-- 时间 -->
-        <label style='display:inline-block'>时间：</label>
+        <label style='display:inline-block'>预期时间：</label>
         <picker name="time" mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
           <view class="picker" wx:if="{{time == ''}}">
             请选择 >
@@ -87,7 +87,7 @@
   </view>
 
   <view class="textarea-wrp">
-    <textarea class='note' name="note" style='height: 3em;' placeholder='请输入备注信息（必填）' placeholder-style='font-size: 12px;'></textarea>
+    <textarea class='note' name="note" style='height: 3em;' placeholder='请输入物品信息（必填）' placeholder-style='font-size: 12px;'></textarea>
   </view>
 
   <input style='display:none' name="avatarUrl" value='{{avatarUrl}}'></input>
