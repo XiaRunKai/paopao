@@ -68,49 +68,45 @@ Page({
   data: {
     items: [
       {
-        url: '',
+        url: '../recharge/recharge',
         image: 'iconfont icon-chongzhi',
         text: '充值',
         color: 'color:#63B8FF'
       }, {
-        url: '',
-        image: 'iconfont icon-yuetuikuan',
+        url: '../refund/refund',
+        image: 'iconfont icon-yue',
         text: '余额退款',
         color: 'color:red'
       }
     ],
     items2: [
       {
-        url: '',
+        url: '../discount/discount',
         image: 'iconfont icon-youhuiquan',
         text: '优惠券',
         color: 'color:#63B8FF'
       }, {
-        url: '',
-        image: 'iconfont icon-jiaoyimingxi',
+        url: '../details/details',
+        image: 'iconfont icon-mingxi',
         text: '交易明细',
         color: 'color:red'
       }
     ],
     items3: [
       {
-        url: '',
-        image: 'iconfont icon-shenqingfapiao',
+        url: '../invoice/invoice',
+        image: 'iconfont icon-ticket-fill',
         text: '申请发票',
         color: 'color:#63B8FF'
       }, {
-        url: '',
-        image: 'iconfont icon-jijiashuoming',
+        url: '../declare/declare',
+        image: 'iconfont icon-icon-',
         text: '计价说明',
         color: 'color:red'
       }
     ]
   
   }
-
-  
-
-
 
 
 })

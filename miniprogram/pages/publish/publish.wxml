@@ -7,7 +7,7 @@
   <label>用户</label> -->
 
   <view id='driver' bindtap='driverPublish'>
-    <i class="iconfont icon-qiche-copy" style="font-size:96rpx;color:#fff"></i>
+    <i class="iconfont icon-xiadan" style="font-size:96rpx;color:#fff"></i>
   </view>
   <label>我要下单</label>
 </view>

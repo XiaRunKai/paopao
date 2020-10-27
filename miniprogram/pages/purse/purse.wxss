@@ -37,8 +37,8 @@ page {
     background: #fff;
     margin-top:10px;
 }
-.icon-chongzhi,.icon-yuetuikuan,.icon-youhuiquan,.icon-jiaoyimingxi,.icon-shenqingfapiao,.icon-jijiashuoming{
-  font-size:30px;
+.icon-chongzhi,.icon-yue,.icon-youhuiquan,.icon-mingxi,.icon-ticket-fill,.icon-icon-{
+  font-size:25px;
   margin-right:10px;
 }
  
