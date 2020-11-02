@@ -33,7 +33,9 @@ page {
   text-align: center;
   background-color: #cccccc;
 }
-
+.img{
+  width: 100%;
+ }
 .course-total {
   display: flex;
   flex-direction: column;

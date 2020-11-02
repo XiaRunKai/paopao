@@ -36,9 +36,7 @@ Page({
       return
     }
 
-    wx.showLoading({
-      title: '加载中...',
-    })
+
     
     this.getAllCourseTotal();
 
@@ -76,18 +74,7 @@ Page({
     // });
   },
 
-  getAllCourseTotal: function () {
-    let _this = this;
-    // 调用云函数，更新统计数据
-    wx.cloud.callFunction({
-      name: 'getAllCourseTotal',
-      data: {},
-    }).then(res => {
-      _this.setData({
-        courseTotalList: res.result.data
-      })
-    }).catch(console.error)
-  },
+
 
   /**
    * 首页 -- 附近拼车
@@ -233,41 +220,9 @@ Page({
     })  
   },
 
-  /**
-   * 附近乘客
-   */
-  bindGetPassengerNearby: function () {
-    this.setData({
-      showType: 0
-    })
-    wx.showLoading({
-      title: '加载中...',
-    })
-    this.bindGetLocation().then(res => { 
-      wx.hideLoading()
-      wx.hideNavigationBarLoading();
-      // 停止下拉动作
-      wx.stopPullDownRefresh();
-    });
-  },
+  
 
-  /**
-   * 附近司机
-   */
-  bindGetDriverNearby: function () {
-    this.setData({
-      showType: 1
-    })
-    wx.showLoading({
-      title: '加载中...',
-    })
-    this.bindGetLocation().then(res => {
-      wx.hideLoading()
-      wx.hideNavigationBarLoading();
-      // 停止下拉动作
-      wx.stopPullDownRefresh();
-    });
-  },
+
 
   bindGoDetail: function(e) {
     let course = e.currentTarget.dataset.course
@@ -288,15 +243,7 @@ Page({
     })
   },
 
-  onGetUserInfo: function(e) {
-    if (!this.logged && e.detail.userInfo) {
-      this.setData({
-        logged: true,
-        avatarUrl: e.detail.userInfo.avatarUrl,
-        userInfo: e.detail.userInfo
-      })
-    }
-  },
+
 
   // onGetOpenid: function() {
   //   // 调用云函数

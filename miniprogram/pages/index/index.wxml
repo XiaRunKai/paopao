@@ -1,5 +1,4 @@
-<view>
-<!-- <view class="container">
+<view class="container">
   <view id='top-bar'>
     <view id='get-location' bindtap='bindGetLocation'>
       <view wx:if="{{locationInfo === ''}}">
@@ -16,25 +15,34 @@
         查询订单
       </view>
     </view>
-  </view> -->
+  </view>
+  <!-- 广告 -->
+<!-- <swiper autoplay="true">
+ <swiper-item>
+ <image  width="335" height="150" mode='widthFix' class='img' src="../../images/bag.png"></image>
+ </swiper-item>
+ <swiper-item>
+ <image  width="335" height="150" mode='widthFix' class='img' src=" ../../images/mima.jpg"></image></swiper-item>
+ 
+</swiper> -->
   <!-- 线路汇总信息 -->
-  <!-- <view bindtap='bindToCourseSearch' class='course-total'>
+  <view bindtap='bindToCourseSearch' class='course-total'>
     <view class='course-total-top'>
       <label style='font-size:32rpx;font-weight:bold;'>
         <i class="iconfont icon-tongji" style="fontsize:20rpx;color:#00b26a"></i>
-        订单汇总
+        我的订单
       </label>
       <label>></label>
     </view>
-    <view class='course-total-list'>
+    <!-- <view class='course-total-list'>
       <view class='course-item' wx:key="{{item._id}}" wx:for="{{courseTotalList}}" wx:for-index="idx" wx:for-item="item">
         <label>{{item.city}}</label>  
         <label class='city-course-total'>{{item.sum}}</label>
       </view>
-    </view>
+    </view> -->
   </view>
 
-  <view class='menu-bar'>
+  <!-- <view class='menu-bar'>
     <view class='menu-title'>
       <i class="iconfont icon-fujin" style="fontsize:20rpx;color:#00b26a"></i>
       附近跑跑员
@@ -49,13 +57,13 @@
   </view> -->
 
   <!-- 行程card -->
-  <!-- <view wx:if="{{msgList.length > 0}}" style="width:100%">
+  <view wx:if="{{msgList.length > 0}}" style="width:100%">
     <courseCard id='courseCard' wx:key="{{item._id}}" wx:for="{{msgList}}" wx:for-index="idx" wx:for-item="item" courseObj='{{item}}' showType="{{showType}}">
     </courseCard>
   </view>
   <view style='width:100%;text-align:center;font-size:28rpx;margin-top:300rpx;' wx:else>
     暂无数据~
-  </view> -->
+  </view>
   <!-- 用户 openid -->
   <!-- <view class="userinfo">
     <button 

@@ -8,13 +8,13 @@ def index(request):
     return HttpResponse("Hello, world. You're at the polls index.")
 
 
-def sign(request):
+def login(request):
     if request.method == "POST":
         data_get = request.POST
     elif request.method == "GET":
         data_get = request.GET
     else:
-        return JsonResponse({"success": 0, "msg": "sign failed"})
+        return JsonResponse({"success": 0, "msg": "login failed"})
 
     phonenumber = data_get.get("phonenumber")
     studentnumber = data_get.get("studentnumber")
