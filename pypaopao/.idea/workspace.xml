@@ -2,25 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6fe162ea-6a59-4733-b008-0f559211e306" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/get_order/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/get_order/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/get_order/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/get_order/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/get_order/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/get_order/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/get_order/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/get_order/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/get_order/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/10dfdd5e-b3e7-4cbe-be1d-924817d01204.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/10dfdd5e-b3e7-4cbe-be1d-924817d01204.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/afcc1356-670f-46ea-b42f-6b4ce6638fdf.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/afcc1356-670f-46ea-b42f-6b4ce6638fdf/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paopao/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/paopao/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paopao/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/paopao/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trytest/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/trytest/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trytest/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/trytest/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trytest/migrations/0002_auto_20201019_2056.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trytest/migrations/0003_auto_20201020_0915.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trytest/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/trytest/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/get_order/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trytest/migrations/0001_initial.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,6 +96,8 @@
       <workItem from="1603793540463" duration="1407000" />
       <workItem from="1604299290664" duration="193000" />
       <workItem from="1604323908410" duration="4686000" />
+      <workItem from="1604328905518" duration="40000" />
+      <workItem from="1604329878193" duration="396000" />
     </task>
     <servers />
   </component>
@@ -159,6 +148,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="270" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1603786872694" />
+    <state x="655" y="299" width="334" height="248" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1604330171641">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="655" y="299" width="334" height="248" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1536.824@0.0.1536.824" timestamp="1604330171641" />
     <state x="349" y="67" key="com.intellij.database.dbimport.ImportDialog" timestamp="1603781458147">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
