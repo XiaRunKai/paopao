@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6fe162ea-6a59-4733-b008-0f559211e306" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/10dfdd5e-b3e7-4cbe-be1d-924817d01204.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/10dfdd5e-b3e7-4cbe-be1d-924817d01204.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/afcc1356-670f-46ea-b42f-6b4ce6638fdf.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/afcc1356-670f-46ea-b42f-6b4ce6638fdf/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/../project.config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/get_order/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trytest/migrations/0001_initial.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +94,8 @@
       <workItem from="1604323908410" duration="4686000" />
       <workItem from="1604328905518" duration="40000" />
       <workItem from="1604329878193" duration="396000" />
+      <workItem from="1604330511743" duration="89000" />
+      <workItem from="1604382177617" duration="570000" />
     </task>
     <servers />
   </component>
