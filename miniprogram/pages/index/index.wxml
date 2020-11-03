@@ -41,6 +41,29 @@
       </view>
     </view> -->
   </view>
+<scroll-view class="hot-box" scroll-y="true">
+<view class="orderDetails" wx:for="{{alreadyOrder}}" wx:key=" ">
+<view class="orderListTitle">
+<text class="userName">{{item.name}}</text>
+<text class="orderStatus">{{item.state}}</text>
+</view>
+<view class="orderListDetails">
+<view class="productImg">
+<image src="{{item.url}}" background-size="cover"></image>
+</view>
+<view class="productInfo">
+<view class="productTitle">预定时间: {{item.time}}</view>
+<text class="productPrice">当前状态：{{item.status}}\n</text>
+<text class="productdescription">任务描述:{{item.description}}</text>
+</view>
+</view>
+<view class="productCount">
+<view>
+<text>合计：￥{{item.money}}</text>
+</view>
+</view>
+</view>
+</scroll-view>
 
   <!-- <view class='menu-bar'>
     <view class='menu-title'>
@@ -57,13 +80,13 @@
   </view> -->
 
   <!-- 行程card -->
-  <view wx:if="{{msgList.length > 0}}" style="width:100%">
+  <!-- <view wx:if="{{msgList.length > 0}}" style="width:100%">
     <courseCard id='courseCard' wx:key="{{item._id}}" wx:for="{{msgList}}" wx:for-index="idx" wx:for-item="item" courseObj='{{item}}' showType="{{showType}}">
     </courseCard>
   </view>
   <view style='width:100%;text-align:center;font-size:28rpx;margin-top:300rpx;' wx:else>
     暂无数据~
-  </view>
+  </view> -->
   <!-- 用户 openid -->
   <!-- <view class="userinfo">
     <button 

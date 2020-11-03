@@ -18,32 +18,36 @@ Page({
   },
   
 
-  // log:function(e){		//与服务器进行交互
+  log:function(e){		//与服务器进行交互
 
-  //   wx.request({
-  //     url: 'http://127.0.0.1:8000/login',	//获取服务器地址，此处为本地地址
-  //     header:{
-  //       "content-type": "application/x-www-form-urlencoded"		//使用POST方法要带上这个header
-  //     },
-  //     method: "POST",
-  //     data: {		//向服务器发送的信息
-  //       username: this.data.username,
-  //       passwd: this.data.passwd
-  //     },
-  //     success: res => {
-  //       if (res.statusCode == 200) {
-  //         this.setData({
-  //           result: res.data	//服务器返回的结果
-  //         })
-  //       }
-  //     }
-  //   })
+    wx.request({
+      url: 'http://127.0.0.1:8000/login',	//获取服务器地址，此处为本地地址
+      header:{
+        "content-type": "application/x-www-form-urlencoded"		//使用POST方法要带上这个header
+      },
+      method: "POST",
+      data: {		//向服务器发送的信息
+        username: this.data.username,
+        passwd: this.data.passwd
+      },
+      success: res => {
+      var resData = res.data;
+      console.log("数据" , resData)
+        if (res.statusCode == 200) {
+          this.setData({
+            result: res.data	//服务器返回的结果
+          })
+        }
+      }
+    })
 
-  // },
+  },
   log: function (options) {
     console.log("lll");
-    wx.redirectTo({
+    wx.switchTab({
       url: '../index/index',
+    })({
+      url: '',
     })
   },
   bindmima: function () {
