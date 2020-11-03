@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/publish/publish",
     "pages/denglu/denglu",
     "pages/index/index",
     "pages/personal/personal",
