@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/denglu/denglu",
+    "pages/index/index",
     "pages/publish/publish",
     "pages/personal/personal",
     "pages/publishMsg/publishMsg",
@@ -13,7 +13,8 @@
     "pages/pubMsgOfDriver/pubMsgOfDriver",
     "pages/aboutUs/aboutUs",
     "pages/nav/nav",
-    "pages/zhuce/zhuce"
+    "pages/zhuce/zhuce",
+    "pages/sure/sure"
   ],
   "window": {
     "backgroundColor": "#7A7A7A",

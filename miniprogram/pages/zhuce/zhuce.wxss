@@ -22,14 +22,14 @@
   align-items: baseline;
   justify-content: space-between;
 }
-.login-icon{
+.register-icon{
   flex: none;
 }
 .log-img
 {
 width: 750rpx;
 }
-.login-from{
+.register-from{
   margin-top: 20px;
   flex:auto;
   height: 100%;
@@ -41,7 +41,7 @@ width: 750rpx;
   
 
 }
-.loginLab
+.registerLab
 {
   margin: 15px 15px 15px 10px;
   color: #545454;
@@ -69,7 +69,7 @@ height:14px;
   background-color: #cccccc;
   margin-top: 1px;
 }
-.login{
+.register{
   width: 100%;
   height:auto;
   
@@ -78,7 +78,7 @@ height:14px;
   padding-bottom:0px; 
 
 }
-.loginbtn{
+.registerbtn{
   background-color: #28d130; 
   width: 80%;
   margin-top: 35px;
