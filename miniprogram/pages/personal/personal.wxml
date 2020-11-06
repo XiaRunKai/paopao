@@ -9,7 +9,7 @@
   <view class='my-items'>
     <view bindtap='bindGetcredits' class='item-wrapper'>
       <view>
-        <i class="iconfont icon-xingzhuanggongnengtubiao-" style="fontsize:20rpx;color:#00b26a;"></i>积分商城 
+        <i class="iconfont icon-shangcheng" style="fontsize:25rpx;color:#00b26a;"></i>积分商城 
       </view>
       <label>></label>
     </view>
@@ -25,24 +25,21 @@
     <!-- 安全须知 -->
     <view class='item-wrapper' bindtap='bindGetpurse'>
       <view>
-        <i class="iconfont icon-ai-safe" style="fontsize:20rpx;color:red;"></i>我的钱包
+        <i class="iconfont icon-qianbao" style="fontsize:25rpx;color:red;"></i>我的钱包
       </view>
       <label>></label>
     </view>
     
     <view bindtap='bindsetting' class='item-wrapper'>
       <view>
-        <i class="iconfont icon-guanyuwomen" style="fontsize:20rpx;color:#00b26a;"></i>设置
+        <i class="iconfont icon-shezhi" style="fontsize:25rpx;color:#00b26a;"></i>设置
       </view>
       <label>></label>
     </view>
 
   <view bindtap='bindkefu' class='item-wrapper'>
-    <view class='it'>
-      <view class="content-icon float-left">
-			<image src="../../images/kefu.png"></image>
-		  </view>
-      <view class="content-text ">客服</view>
+    <view >
+      <i class="iconfont icon-tubiao-" style="fontsize:25rpx;color:#00b26a;"></i>客服
     </view>
     <label>></label>
   </view>

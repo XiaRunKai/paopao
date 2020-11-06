@@ -2,7 +2,6 @@
   "pages": [
     "pages/denglu/denglu",
     "pages/index/index",
-    "pages/publish/publish",
     "pages/personal/personal",
     "pages/publishMsg/publishMsg",
     "pages/kefu/kefu",
@@ -12,9 +11,24 @@
     "pages/personalCollection/personalCollection",
     "pages/pubMsgOfDriver/pubMsgOfDriver",
     "pages/aboutUs/aboutUs",
+    "pages/components/components",
+    "pages/details/details",
+    "pages/guanyuwomen/guanyuwomen",
+    "pages/myCourse/myCourse",
+    "pages/setting/setting",
+    "pages/storageConsole/storageConsole",
+    "pages/yonghuxieyi/yonghuxieyi",
     "pages/nav/nav",
     "pages/zhuce/zhuce",
-    "pages/sure/sure"
+    "pages/purse/purse",
+    "pages/credits/credits",
+    "pages/declare/declare",
+    "pages/discount/discount",
+    "pages/invoice/invoice",
+    "pages/recharge/recharge",
+    "pages/refund/refund"
+
+    
   ],
   "window": {
     "backgroundColor": "#7A7A7A",
