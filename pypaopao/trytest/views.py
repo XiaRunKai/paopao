@@ -38,23 +38,18 @@ def register(request):
     else:
         return JsonResponse({"success": 0, "msg": "register failed"})
 
-    username = data_get.get("username")
     phonenumber = data_get.get("phonenumber")
     studentnumber = data_get.get("studentnumber")
     password = data_get.get("password")
 
-    this_user = User(UserName=username, Password=password, StudentNumber=studentnumber, PhoneNumber=phonenumber)
+    this_user = User(Password=password, StudentNumber=studentnumber, PhoneNumber=phonenumber)
     try:
-        User.objects.get(UserName=username)
-        return JsonResponse({"status": -1, "msg": "user name exists"})
+        User.objects.get(StudentNumber=studentnumber)
+        return JsonResponse({"status": -1, "msg": "student has already register"})
     except:
         try:
-            User.objects.get(StudentNumber=studentnumber)
-            return JsonResponse({"status": -1, "msg": "student has already register"})
+            User.objects.get(PhoneNumber=phonenumber)
+            return JsonResponse({"status": -1, "msg": "phone user has register"})
         except:
-            try:
-                User.objects.get(PhoneNumber=phonenumber)
-                return JsonResponse({"status": -1, "msg": "phone user has register"})
-            except:
-                this_user.save()
-                return JsonResponse({"status": 1, "msg": "注册成功"})
+            this_user.save()
+            return JsonResponse({"status": 1, "msg": "注册成功"})

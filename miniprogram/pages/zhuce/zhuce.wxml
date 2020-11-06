@@ -6,23 +6,23 @@
      <view class="inputView">
         <image class='namelmage' src='../../images/zhanghao.jpg'></image>
         <label class='registerLab'>手机号</label>
-        <input class='inputText' bindinput='inputName' placeholder='请输入手机号' name='phone' type='text'/>
+        <input class='inputText' bindinput='inputphonenumber' placeholder='请输入手机号' name='phonenumber' type='text'/>
       </view>
    <view class='line'></view>
     <view class="inputView">
         <image class='namelmage' src='../../images/zhanghao.jpg'></image>
         <label class='registerLab'>学号</label>
-        <input class='inputText' bindinput='inputName' placeholder='请输入学号' name='username' type='text'/>
+        <input class='inputText' bindinput='inputName' placeholder='请输入学号' name='studentnumber' type='text'/>
       <view class='line'></view>
       <view class="inputView">
         <image class='keylmage' src='../../images/mima.jpg'></image>
         <label class='registerLab'>密码</label>
-        <input class='inputText'password="true" bindinput='inputPwd' placeholder='请输入密码' name='passwd'/>
+        <input class='inputText'password="true" bindinput='inputPwd' placeholder='请输入密码' name='password'/>
       </view>
     </view>
 
     <view class="register">
-      <button class='registerbtn' type='primary ' size='{{primarysize }}'loading='{{loading}}' plain="{{plain}}"bindtap="log">注册</button>
+      <button class='registerbtn' type='primary ' size='{{primarysize }}'loading='{{loading}}' plain="{{plain}}" bindtap="log">注册</button>
       <view class='info'>{{result}}</view>
     </view>
   </view>

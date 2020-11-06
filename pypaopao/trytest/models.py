@@ -2,10 +2,9 @@ from django.db import models
 
 
 class User(models.Model):
-    UserName = models.CharField(max_length=10, null=True)
+    StudentNumber = models.CharField(max_length=20)
     Password = models.CharField(max_length=20)
-    PhoneNumber = models.IntegerField()
-    StudentNumber = models.IntegerField()
+    PhoneNumber = models.CharField(max_length=20)
 
     class Meta:
         db_table = "user"
