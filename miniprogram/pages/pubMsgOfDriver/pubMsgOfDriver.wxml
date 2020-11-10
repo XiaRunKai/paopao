@@ -81,6 +81,7 @@
         </picker> 
       </view>
     </view>
+    
     <view class="input-wrapper">
       <input style='height:35px;' type='number' name="phone" placeholder='请输入联系方式'/>
     </view>  

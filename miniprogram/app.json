@@ -4,6 +4,7 @@
     "pages/index/index",
     "pages/personal/personal",
     "pages/publishMsg/publishMsg",
+    "pages/publish/publish",
     "pages/kefu/kefu",
     "pages/courseDetail/courseDetail",
     "pages/courseSearch/courseSearch",

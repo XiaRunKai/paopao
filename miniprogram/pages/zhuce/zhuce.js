@@ -36,7 +36,16 @@ Page({
         password: this.data.password,
         phonenumber: this.data.phonenumber
       },
+      success: function (res) { 
+        console.log(res.data) 
+        that.setData({ 
+          result: res.data //设置数据 result
+        }) 
+      }, 
+      fail: function (err) { 
+        console.log(err) 
+      } 
     })
-  },
+  }
  
 })
