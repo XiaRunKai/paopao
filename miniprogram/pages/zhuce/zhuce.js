@@ -36,6 +36,20 @@ Page({
         password: this.data.password,
         phonenumber: this.data.phonenumber
       },
+      success:function(res){
+        console.log(res)
+        wx.showToast({
+          title: res.data.data,
+        })
+        if(res.data.data="注册成功"){
+          wx.switchTab({
+            url: '../index/index',
+          })
+        }
+      },
+      fail: function(err){
+        console.log(err)
+      }
     })
   },
  

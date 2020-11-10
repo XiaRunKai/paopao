@@ -3,6 +3,7 @@
     "pages/denglu/denglu",
     "pages/index/index",
     "pages/personal/personal",
+    "pages/publish/publish",
     "pages/publishMsg/publishMsg",
     "pages/kefu/kefu",
     "pages/courseDetail/courseDetail",
