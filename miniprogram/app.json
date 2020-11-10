@@ -2,15 +2,15 @@
   "pages": [
     "pages/denglu/denglu",
     "pages/index/index",
+    "pages/pubMsgOfDriver/pubMsgOfDriver",
     "pages/personal/personal",
     "pages/publish/publish",
-    "pages/publishMsg/publishMsg",
     "pages/kefu/kefu",
     "pages/courseDetail/courseDetail",
     "pages/courseSearch/courseSearch",
     "pages/courseSearch/courseSearchByLoc",
     "pages/personalCollection/personalCollection",
-    "pages/pubMsgOfDriver/pubMsgOfDriver",
+
     "pages/aboutUs/aboutUs",
     "pages/components/components",
     "pages/details/details",

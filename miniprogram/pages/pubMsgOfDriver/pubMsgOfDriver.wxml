@@ -50,7 +50,7 @@
       </view> -->
       <view class="input-wrapper">
           <label>价格</label>
-          <input style='height:35px;flex: 1; text-align: right;padding-right: 20rpx;' type='number' name="price" placeholder='点击输入'/>
+          <input style='height:35px;flex: 1; text-align: right;padding-right: 20rpx;'  bindinput="inputprice" type='number' name="price" placeholder='点击输入'/>
       </view>  
     </view>
 
@@ -82,19 +82,19 @@
       </view>
     </view>
     <view class="input-wrapper">
-      <input style='height:35px;' type='number' name="phone" placeholder='请输入联系方式'/>
+      <input style='height:35px;' type='number' name="phone" bindinput="inputphone" placeholder='请输入联系方式'/>
     </view>  
   </view>
 
   <view class="textarea-wrp">
-    <textarea class='note' name="ordername" style='height: 3em;' placeholder='请简述跑腿需求（例如拿外卖）' placeholder-style='font-size: 12px;'></textarea>
+    <textarea class='note' name="ordername" style='height: 3em;' bindinput="inputordername" placeholder='请简述跑腿需求（例如拿外卖）' placeholder-style='font-size: 12px;'></textarea>
   </view>
     <view class="textarea-wrp">
-    <textarea class='note' name="orderinformation" style='height: 3em;' placeholder='请输入订单介绍' placeholder-style='font-size: 12px;'></textarea>
+    <textarea class='note' name="orderinformation" style='height: 3em;' bindinput="inputorderinformation" placeholder='请输入订单介绍' placeholder-style='font-size: 12px;'></textarea>
   </view>
 
   <input style='display:none' name="avatarUrl" value='{{avatarUrl}}'></input>
-  <button form-type="submit" class='publish-btn' bindtap="driverMsgAdd">发布</button>
+  <button form-type="submit" class='publish-btn' bindtap="ordersubmit">发布</button>
   </form>
 </view>
 

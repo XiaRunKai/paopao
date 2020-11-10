@@ -26,8 +26,6 @@ Page({
     longitude: '113.66072',
     startAddressInfo: '',
     endAddressInfo: '',
-    searRange: [1, 2, 3, 4, 5, 6, 7, 8],
-    index: -1,
     covers: [{
       latitude: 23.099994,
       longitude: 113.344520,
@@ -37,8 +35,33 @@ Page({
       longitude: 113.304520,
       iconPath: '/image/location.png'
     }],
+    price:'',
     date: '',
-    time: ''
+    time: '',
+    phone:'',
+    ordername:'',
+    orderinformation:'',
+  },
+
+  inputprice: function(e){	
+    this.setData({
+      price: e.detail.value	
+    })
+  },
+  inputphone: function(e){	
+    this.setData({
+      phone: e.detail.value	
+    })
+  },
+  inputordername: function(e){	
+    this.setData({
+      ordername: e.detail.value	
+    })
+  },
+  inputorderinformation: function(e){	
+    this.setData({
+      orderinformation: e.detail.value	
+    })
   },
 
   /**
@@ -132,6 +155,31 @@ Page({
       time: e.detail.value
     })
   },
+  ordersubmit: function(e){		//与服务器进行交互
+    wx.request({
+      url: "http://127.0.0.1:8000/get_order/getorder/" ,	//获取服务器地址，此处为本地地址
+      header:{
+        "content-type": "application/x-www-form-urlencoded"		//使用POST方法要带上这个header
+      },
+      method: "POST",
+      data: {		//向服务器发送的信息
+        start: this.data.startAddressInfo.name,
+        end:this.data.endAddressInfo.name,
+        price:this.data.price,
+        date:this.data.date,
+        time: this.data.time,
+        orderinformation:this.data.orderinformation,
+        ordername:this.data.ordername,
+        phone: this.data.phonenumber
+      },
+      success:function(res){
+        console.log(res)
+      },
+      fail: function(err){
+        console.log(err)
+      }
+    })
+  },
   formSubmit: function (e) {
     /**
      * 表单校验
@@ -151,115 +199,114 @@ Page({
     }
 
     if (submitFlag) {
-      // 开始处理提交
-      wx.showLoading({
-        title: '提交中...',
-      })
-      formData.startAddressInfo = this.data.startAddressInfo;
-      formData.endAddressInfo = this.data.endAddressInfo;
-      console.log("###", formData.startAddressInfo.addressComponent)
+      // // 开始处理提交
+      // wx.showLoading({
+      //   title: '提交中...',
+      // })
+      // formData.startAddressInfo = this.data.startAddressInfo;
+      // formData.endAddressInfo = this.data.endAddressInfo;
+      // console.log("###", formData.startAddressInfo.addressComponent)
 
-      // 写入行程汇总数据
-      let insertCourse = new Promise(function (resolve, reject) {
-        // 写入发布信息数据
-        db.collection('driverMsg').add({
-          // data 字段表示需新增的 JSON 数据
-          data: formData,
-          success: function (res) {
-            resolve()
-            // res 是一个对象，其中有 _id 字段标记刚创建的记录的 id
-          },
-          fail: function (res) {
-            reject()
-          }
-        })
-      })
+      // // 写入行程汇总数据
+      // let insertCourse = new Promise(function (resolve, reject) {
+      //   // 写入发布信息数据
+      //   db.collection('driverMsg').add({
+      //     // data 字段表示需新增的 JSON 数据
+      //     data: formData,
+      //     success: function (res) {
+      //       resolve()
+      //       // res 是一个对象，其中有 _id 字段标记刚创建的记录的 id
+      //     },
+      //     fail: function (res) {
+      //       reject()
+      //     }
+      //   })
+      // })
 
-      let insertTotal = new Promise(function (resolve, reject) {
-        resolve();
-        // let addressComponent = formData.startAddressInfo.addressComponent;
+      // let insertTotal = new Promise(function (resolve, reject) {
+      //   resolve();
+      //   // let addressComponent = formData.startAddressInfo.addressComponent;
 
-        // // 查询是否存在当前city的数据
-        // db.collection('courseTotalDriver').where({
-        //   city: addressComponent.city,
-        // }).get().then(res => {
-        //   // 更新城市数据
-        //   if (res.data.length > 0) {
-        //     let id = res.data[0]._id;
-        //     let sum = res.data[0].sum;
-        //     // 调用云函数，更新统计数据
-        //     wx.cloud.callFunction({
-        //       name: 'updateCourseTotalDriver',
-        //       data: {
-        //         _id: id,
-        //         sum: sum,
-        //         type: 'add'
-        //       },
-        //     }).then(res => {
-        //       resolve()
-        //     }).catch(console.error)
-        //   } else {
-        //     // 插入新数据
+      //   // // 查询是否存在当前city的数据
+      //   // db.collection('courseTotalDriver').where({
+      //   //   city: addressComponent.city,
+      //   // }).get().then(res => {
+      //   //   // 更新城市数据
+      //   //   if (res.data.length > 0) {
+      //   //     let id = res.data[0]._id;
+      //   //     let sum = res.data[0].sum;
+      //   //     // 调用云函数，更新统计数据
+      //   //     wx.cloud.callFunction({
+      //   //       name: 'updateCourseTotalDriver',
+      //   //       data: {
+      //   //         _id: id,
+      //   //         sum: sum,
+      //   //         type: 'add'
+      //   //       },
+      //   //     }).then(res => {
+      //   //       resolve()
+      //   //     }).catch(console.error)
+      //   //   } else {
+      //   //     // 插入新数据
 
-        //     // 写入汇总数据
-        //     db.collection('courseTotalDriver').add({
-        //       data: {
-        //         city: addressComponent.city,
-        //         sum: 1
-        //       },
-        //       success: function (res) {
-        //         resolve()
-        //       },
-        //       fail: function (res) {
-        //         reject()
-        //       }
-        //     })
-        //   }
-        // })
-      })
+      //   //     // 写入汇总数据
+      //   //     db.collection('courseTotalDriver').add({
+      //   //       data: {
+      //   //         city: addressComponent.city,
+      //   //         sum: 1
+      //   //       },
+      //   //       success: function (res) {
+      //   //         resolve()
+      //   //       },
+      //   //       fail: function (res) {
+      //   //         reject()
+      //   //       }
+      //   //     })
+      //   //   }
+      //   // })
+      // })
 
-      //Promise的all方法，等数组中的所有promise对象都完成执行
-      Promise.all([insertCourse, insertTotal]).then(function ([ResultJson1, ResultJson2]) {
-        // 隐藏加载弹窗
-        wx.hideLoading();
-        wx.showToast({
-          title: '发布成功',
-          icon: 'success',
-          duration: 1000
-        })
-        // 跳转行程搜索结果页面
-        setTimeout(function () {
-          wx.redirectTo({
-            url: '../courseSearch/courseSearchByLoc?searchObj=' + JSON.stringify(searchObj),
-          })
-        }, 1000)
-      })
+      // //Promise的all方法，等数组中的所有promise对象都完成执行
+      // Promise.all([insertCourse, insertTotal]).then(function ([ResultJson1, ResultJson2]) {
+      //   // 隐藏加载弹窗
+      //   wx.hideLoading();
+      //   wx.showToast({
+      //     title: '发布成功',
+      //     icon: 'success',
+      //     duration: 1000
+      //   })
+      //   // 跳转行程搜索结果页面
+      //   setTimeout(function () {
+      //     wx.redirectTo({
+      //       url: '../courseSearch/courseSearchByLoc?searchObj=' + JSON.stringify(searchObj),
+      //     })
+      //   }, 1000)
+      // })
     }
   },
-  passengerMsgAdd: function (e) {
 
-  },
-  searchAddress: function (e) {
-    console.log(e.detail.value)
-    demo.getSuggestion({
-      keyword: e.detail.value,
-      success: function (res) {
-        console.log(res);
-      },
-      fail: function (res) {
-        console.log(res);
-      },
-      complete: function (res) {
-        console.log(res);
-      }
-    });
-  },
-  bindNumChange: function (e) {
-    console.log(e.detail)
-    this.setData({
-      index: e.detail.value
-    })
-  },
+  // searchAddress: function (e) {
+  //   console.log(e.detail.value)
+  //   demo.getSuggestion({
+  //     keyword: e.detail.value,
+  //     success: function (res) {
+  //       console.log(res);
+  //     },
+  //     fail: function (res) {
+  //       console.log(res);
+  //     },
+  //     complete: function (res) {
+  //       console.log(res);
+  //     }
+  //   });
+  // },
+  // bindNumChange: function (e) {
+  //   console.log(e.detail)
+  //   this.setData({
+  //     index: e.detail.value
+  //   })
+  // },
+
   /**
    * 选择终点
    */

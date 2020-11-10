@@ -22,7 +22,7 @@
     </view>
 
     <view class="register">
-      <button class='registerbtn' type='primary ' size='{{primarysize }}'loading='{{loading}}' plain="{{plain}}" bindtap="log">注册</button>
+      <button class='registerbtn' type='primary ' size='{{primarysize }}'loading='{{loading}}' plain="{{plain}}" bindtap="register">注册</button>
       <view class='info'>{{result}}</view>
     </view>
   </view>
