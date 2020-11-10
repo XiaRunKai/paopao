@@ -6,14 +6,14 @@ Page({
     studentnumber: '',
     password: ''
   },
-  inputName: function(e){	// 用于获取输入的账号
+  inputName: function(e){	// 用于获取输入的学号
     this.setData({
-      studentnumber: e.detail.value	//将获取到的账号赋值给username变量
+      studentnumber: e.detail.value	//将获取到的账号赋值给studentnumber变量
     })
   },
-  inputphonenumber: function(e){	// 用于获取输入的账号
+  inputphonenumber: function(e){	// 用于获取输入的电话
     this.setData({
-      phonenumber: e.detail.value	//将获取到的账号赋值给username变量
+      phonenumber: e.detail.value	//将获取到的账号赋值给phonenumber变量
     })
   },
   inputPwd: function (e) {		// 用于获取输入的密码
@@ -23,8 +23,7 @@ Page({
   },
   
 
-  log: function(e){		//与服务器进行交互
-    console.log("klkl")
+  register: function(e){		//与服务器进行交互
     wx.request({
       url: "http://127.0.0.1:8000/trytest/register/" ,	//获取服务器地址，此处为本地地址
       header:{
@@ -36,6 +35,7 @@ Page({
         password: this.data.password,
         phonenumber: this.data.phonenumber
       },
+<<<<<<< HEAD
       success: function (res) { 
         console.log(res.data) 
         that.setData({ 
@@ -45,6 +45,22 @@ Page({
       fail: function (err) { 
         console.log(err) 
       } 
+=======
+      success:function(res){
+        console.log(res)
+        wx.showToast({
+          title: res.data.data,
+        })
+        if(res.data.data="注册成功"){
+          wx.switchTab({
+            url: '../index/index',
+          })
+        }
+      },
+      fail: function(err){
+        console.log(err)
+      }
+>>>>>>> f4ebe303d240a38cf345d82d5dc8c654eb7be611
     })
   }
  

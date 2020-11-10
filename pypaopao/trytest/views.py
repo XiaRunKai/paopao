@@ -45,11 +45,11 @@ def register(request):
     this_user = User(Password=password, StudentNumber=studentnumber, PhoneNumber=phonenumber)
     try:
         User.objects.get(StudentNumber=studentnumber)
-        return JsonResponse({"status": -1, "msg": "student has already register"})
+        return JsonResponse({"data": "注册失败，该学号已被注册"})
     except:
         try:
             User.objects.get(PhoneNumber=phonenumber)
-            return JsonResponse({"status": -1, "msg": "phone user has register"})
+            return JsonResponse({"data": "注册失败，该电话已被注册"})
         except:
             this_user.save()
-            return JsonResponse({"status": 1, "msg": "注册成功"})
+            return JsonResponse({"data": "注册成功"})
