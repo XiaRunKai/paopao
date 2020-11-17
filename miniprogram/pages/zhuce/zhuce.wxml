@@ -6,18 +6,18 @@
      <view class="inputView">
         <image class='namelmage' src='../../images/zhanghao.jpg'></image>
         <label class='registerLab'>手机号</label>
-        <input class='inputText' bindinput='inputphonenumber' placeholder='请输入手机号' name='phonenumber' type='text'/>
+        <input class='inputText'  bindblur="mobileinput" value="{{registration.mobile}}"  bindinput='inputphonenumber' placeholder='请输入手机号' name='phonenumber'  maxlength="11" type='number'/>
       </view>
    <view class='line'></view>
     <view class="inputView">
         <image class='namelmage' src='../../images/zhanghao.jpg'></image>
         <label class='registerLab'>学号</label>
-        <input class='inputText' bindinput='inputName' placeholder='请输入学号' name='studentnumber' type='text'/>
+        <input class='inputText' bindinput='inputName' placeholder='请输入学号' name='studentnumber' maxlength="13" type='number'/>
       <view class='line'></view>
       <view class="inputView">
         <image class='keylmage' src='../../images/mima.jpg'></image>
         <label class='registerLab'>密码</label>
-        <input class='inputText'password="true" bindinput='inputPwd' placeholder='请输入密码' name='password'/>
+        <input class='inputText'password="true" bindinput='inputPwd' placeholder='请输入密码' maxlength="15" name='password'/>
       </view>
     </view>
 

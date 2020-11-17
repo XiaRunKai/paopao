@@ -11,10 +11,8 @@ def index(request):
 def login(request):
     if request.method == "POST":
         data_get = request.POST
-    elif request.method == "GET":
-        data_get = request.GET
     else:
-        return JsonResponse({"success": 0, "msg": "login failed"})
+        return JsonResponse({"msg": "登录失败"})
 
     studentnumber = data_get.get("studentnumber")
     password = data_get.get("password")

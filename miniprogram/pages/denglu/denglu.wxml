@@ -5,16 +5,16 @@
   <view class='login-from'>
     <view class="inputView">
         <image class='namelmage' src='../../images/zhanghao.jpg'></image>
-        <label class='loginLab'>账号</label>
-        <input class='inputText' bindinput='inputName' placeholder='请输入学号' name='username' type='text'/>
+        <label class='loginLab'>学号</label>
+        <input class='inputText' bindinput='inputName' placeholder='请输入学号' name='studentnumber' maxlength="13" type='number'/>
       <view class='line'></view>
       <view class="inputView">
         <image class='keylmage' src='../../images/mima.jpg'></image>
         <label class='loginLab'>密码</label>
-        <input class='inputText'password="true" bindinput='inputPwd' placeholder='请输入密码' name='password'/>
+        <input class='inputText'password="true" bindinput='inputPwd' placeholder='请输入密码' maxlength="15" name='password'/>
       </view>
     </view>
-    <view bindtap='bindmima' class='item-wrapper'>若从未登录，请先注册</view>
+    <view bindtap='bindmima' class='item-wrapper'>快速注册</view>
     <view class="login">
       <button class='loginbtn' type='primary' size='{{primarysize }}'loading='{{loading}}' plain="{{plain}}" bindtap="log">登录</button>
       <view class='info'>{{result}}</view>

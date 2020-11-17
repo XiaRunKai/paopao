@@ -24,6 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="JupyterTrust" id="ed962b39-a38c-4cf1-90f6-f7b0e79a2461" />
   <component name="ProjectId" id="1j8Fv19m5Wj21o87kkQkTseqj22" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -39,7 +40,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$USER_HOME$/bizhi" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+>>>>>>> ae5869987e14ef92098f54b3ed037c4c33402ae8
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -71,6 +76,7 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -102,30 +108,41 @@
       <workItem from="1604477350216" duration="545000" />
       <workItem from="1604581501089" duration="1418000" />
       <workItem from="1604643346556" duration="5084000" />
+<<<<<<< HEAD
+      <workItem from="1604979054064" duration="2463000" />
+=======
       <workItem from="1604650974773" duration="332000" />
       <workItem from="1604846558649" duration="845000" />
       <workItem from="1604905602542" duration="1196000" />
       <workItem from="1604936444059" duration="455000" />
       <workItem from="1604966635547" duration="10727000" />
+<<<<<<< HEAD
       <workItem from="1604984883421" duration="2204000" />
       <workItem from="1605079622261" duration="621000" />
       <workItem from="1605166469981" duration="463000" />
       <workItem from="1605317791045" duration="189000" />
       <workItem from="1605591944790" duration="2159000" />
+=======
+>>>>>>> f4ebe303d240a38cf345d82d5dc8c654eb7be611
+>>>>>>> ae5869987e14ef92098f54b3ed037c4c33402ae8
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="222" y="66" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604324053425">
+    <state x="433" y="138" key="#HTTP_Proxy" timestamp="1604988045086">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="222" y="66" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1604324053425" />
+    <state x="433" y="138" key="#HTTP_Proxy/0.0.1536.824@0.0.1536.824" timestamp="1604988045086" />
+    <state x="255" y="63" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604988466895">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="255" y="63" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1604988466895" />
     <state x="367" y="0" key="CommitChangelistDialog2" timestamp="1604477899146">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

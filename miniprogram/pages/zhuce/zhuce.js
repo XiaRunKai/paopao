@@ -21,6 +21,50 @@ Page({
       password: e.detail.value	//将获取到的账号赋值给password变量
     })
   },
+    // 电话输入
+  //mobileFormat表示输入是都符合电话号码规则
+  mobileinput:function(e) {
+    let value = e.detail.value.replace(/\D/g, '')
+    this.setData({
+      mobile: value,
+    })
+    var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
+    if (this.data.mobile.length == 0) {
+      wx.showToast({
+        title: '输入的手机号为空，请重新输入！',
+        icon: 'none',
+        duration: 2500
+      })
+      this.setData({
+        mobileFormat: false,
+      })
+
+    } else if (this.data.mobile.length < 11) {
+      wx.showToast({
+        title: '手机号长度有误，请重新输入！',
+        icon: 'none',
+        duration: 1500
+      })
+      this.setData({
+        mobileFormat: false,
+      })
+
+    } else if (!myreg.test(this.data.mobile)) {
+      wx.showToast({
+        title: '手机号有误，请重新输入！',
+        icon: 'none',
+        duration: 1500
+      })
+      this.setData({
+        mobileFormat: false,
+      })
+
+    } else {
+      this.setData({
+        mobileFormat: true,
+      })
+    }
+  },
   
 
   register: function(e){		//与服务器进行交互
@@ -50,6 +94,5 @@ Page({
         console.log(err)
       }
     })
-  },
- 
+  }
 })

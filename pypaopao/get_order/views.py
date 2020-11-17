@@ -1,3 +1,4 @@
+
 import json
 
 from django.http import JsonResponse
@@ -23,6 +24,7 @@ def getorder(request):
                            EstimatedDate=estimateddate, EstimatedTime=estimatedtime, Price=price,
                            OrderName=ordername, PhoneNumber=phonenumber)
         this_order.save()
+
         return JsonResponse({"data": [{"startplace": startplace, "endplace": endplace,
                                       "orderinformation": orderinformation, "ordername": ordername,
                                       "estimateddate": estimateddate, "estimatedtime": estimatedtime,
