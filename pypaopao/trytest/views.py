@@ -11,16 +11,13 @@ def index(request):
 def login(request):
     if request.method == "POST":
         data_get = request.POST
-    elif request.method == "GET":
-        data_get = request.GET
     else:
-        return JsonResponse({"success": 0, "msg": "login failed"})
+        return JsonResponse({"msg": "登录失败"})
 
-    phonenumber = data_get.get("phonenumber")
     studentnumber = data_get.get("studentnumber")
     password = data_get.get("password")
     try:
-        this_user = User.objects.get(PhoneNumber=phonenumber)
+        this_user = User.objects.get(StudentNumber=studentnumber)
     except:
         return JsonResponse({"status": -1, "msg": "user doesn't exist"})
     if this_user.Password == password:
