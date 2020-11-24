@@ -30,8 +30,6 @@ def login(request):
 def register(request):
     if request.method == "POST":
         data_get = request.POST
-    elif request.method == "GET":
-        data_get = request.GET
     else:
         return JsonResponse({"success": 0, "msg": "register failed"})
 
