@@ -24,7 +24,7 @@ Page({
       header:{
         "content-type": "application/x-www-form-urlencoded"		//使用POST方法要带上这个header
       },
-      method: "POST",
+      method: "GET",
       data: {		//向服务器发送的信息
         studentnumber: this.data.studentnumber,
         password: this.data.password
@@ -34,7 +34,8 @@ Page({
         wx.showToast({
           title: res.data.msg,
         })
-        if(res.data.msg="登录成功"){
+        if(res.data.msg=="登录成功"){
+
           wx.switchTab({
             url: '../index/index',
           })

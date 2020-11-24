@@ -44,7 +44,7 @@
 <scroll-view class="hot-box" scroll-y="true">
 <view class="orderDetails" wx:for="{{alreadyOrder}}" wx:key=" ">
 <view class="orderListTitle">
-<text class="userName">{{item.name}}</text>
+<text class="userName">{{item.OrderName}}</text>
 <text class="orderStatus">{{item.state}}</text>
 </view>
 <view class="orderListDetails">
@@ -52,14 +52,15 @@
 <image src="{{item.url}}" background-size="cover"></image>
 </view>
 <view class="productInfo">
-<view class="productTitle">预定时间: {{item.time}}</view>
-<text class="productPrice">当前状态：{{item.status}}\n</text>
-<text class="productdescription">任务描述:{{item.description}}</text>
+<view class="productTitle">预定时间: {{item.EstimatedDate}} {{item.EstimatedTime}}</view>
+<text class="productPrice">起点：{{item.StartPlace}}\n</text>
+<text class="productPrice">终点：{{item.EndPlace}}\n</text>
+<text class="productdescription">任务描述: {{item.OrderInformation}}</text>
 </view>
 </view>
 <view class="productCount">
 <view>
-<text>合计：￥{{item.money}}</text>
+<text>合计：{{item.Price}}元</text>
 </view>
 </view>
 </view>

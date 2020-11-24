@@ -25,7 +25,8 @@ Page({
     msgList: [],
     courseTotalList: [],
     locationInfo: '',
-    showType: 0
+    showType: 0,
+    alreadyOrder:[]
   },
 
   onLoad: function() {
@@ -51,7 +52,8 @@ Page({
     //获得dialog组件
     this.courseCard = this.selectComponent("#courseCard");
   // 页面渲染完成
-this.alreadyShow()
+// this.alreadyShow()
+this.allorder()
   },
   
   /**
@@ -237,11 +239,30 @@ this.alreadyShow()
       url: '../courseSearch/courseSearch'
     })
   },
-  alreadyShow: function(){
-    this.setData({
-    alreadyOrder: [{ name: "校园卡", state: "交易成功", time: "2020-09-30 16:00", status: "已完成", url: "../../images/bag.png", money: "13" }, { name: "快递", state: "交易成功", time: "2020-10-12 20:00", status: "已完成", url: "../../images/bag.png", money: "5" },{ name: "带饭", state: "待付款", time: "2020-10-14 16:00",description:"我的包落在望江东二教302的第二排,请帮我拿到华西校区22舍", status: "已接受", url: "../../images/bag.png", money: "8" },{ name: "书包", state: "未接收", time: "2020-10-4 12:00", status: "审核不通过或尚未被接单", url: "../../images/bag.png", money: "2" }]
+  allorder: function(e){		//与服务器进行交互
+    let that = this
+    wx.request({
+      url: "http://127.0.0.1:8000/get_order/allorder/" ,	//获取服务器地址，此处为本地地址
+      header:{
+        "content-type": "application/x-www-form-urlencoded"		//使用POST方法要带上这个header
+      },
+      method: "GET",
+      success:function(res){
+        console.log(res)
+        that.setData({
+          alreadyOrder:res.data
+        })
+      },
+      fail: function(err){
+        console.log(err)
+      }
     })
-    },
+  },
+  // alreadyShow: function(){
+  //   this.setData({
+  //   alreadyOrder: [{ name: "校园卡", state: "交易成功", time: "2020-09-30 16:00", status: "已完成", url: "../../images/bag.png", money: "13" }, { name: "快递", state: "交易成功", time: "2020-10-12 20:00", status: "已完成", url: "../../images/bag.png", money: "5" },{ name: "带饭", state: "待付款", time: "2020-10-14 16:00",description:"我的包落在望江东二教302的第二排,请帮我拿到华西校区22舍", status: "已接受", url: "../../images/bag.png", money: "8" },{ name: "书包", state: "未接收", time: "2020-10-4 12:00", status: "审核不通过或尚未被接单", url: "../../images/bag.png", money: "2" }]
+  //   })
+  //   },
 
   goSearchByLocPage: function (e) {
     wx.navigateTo({

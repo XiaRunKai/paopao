@@ -8,8 +8,8 @@ from get_order.models import Order
 
 
 def getorder(request):
-    if request.method == "POST":
-        order_get = request.POST
+    if request.method == "GET":
+        order_get = request.GET
 
         startplace = order_get.get("start")
         endplace = order_get.get("end")
@@ -28,6 +28,12 @@ def getorder(request):
         return JsonResponse({"data": [{"startplace": startplace, "endplace": endplace,
                                       "orderinformation": orderinformation, "ordername": ordername,
                                       "estimateddate": estimateddate, "estimatedtime": estimatedtime,
-                                      "price": price, "phonenumber": phonenumber}]})
+                                      "price": price, "phonenumber": phonenumber}],"msg": "成功"})
     else:
         return JsonResponse({"msg": "订单提交失败"})
+
+
+def allorder(request):
+    orders = Order.objects.values()
+    ord = list(orders)
+    return JsonResponse(ord, safe=False)

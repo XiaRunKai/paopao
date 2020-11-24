@@ -161,7 +161,7 @@ Page({
       header:{
         "content-type": "application/x-www-form-urlencoded"		//使用POST方法要带上这个header
       },
-      method: "POST",
+      method: "GET",
       data: {		//向服务器发送的信息
         start: this.data.startAddressInfo.name,
         end:this.data.endAddressInfo.name,
@@ -174,6 +174,15 @@ Page({
       },
       success:function(res){
         console.log(res)
+        if(res.data.msg=="成功"){
+          wx.showToast({
+            icon: 'none',
+            title: '订单提交成功',
+          })
+          wx.switchTab({
+            url: '../index/index',
+          })
+        }
       },
       fail: function(err){
         console.log(err)

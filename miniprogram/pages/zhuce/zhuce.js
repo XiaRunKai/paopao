@@ -73,7 +73,7 @@ Page({
       header:{
         "content-type": "application/x-www-form-urlencoded"		//使用POST方法要带上这个header
       },
-      method: "POST",
+      method: "GET",
       data: {		//向服务器发送的信息
         studentnumber: this.data.studentnumber,
         password: this.data.password,
@@ -82,9 +82,10 @@ Page({
       success:function(res){
         console.log(res)
         wx.showToast({
+          icon: 'none',
           title: res.data.data,
         })
-        if(res.data.data="注册成功"){
+        if(res.data.data=="注册成功"){
           wx.switchTab({
             url: '../index/index',
           })

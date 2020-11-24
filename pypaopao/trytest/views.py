@@ -17,7 +17,7 @@ def login(request):
     studentnumber = data_get.get("studentnumber")
     password = data_get.get("password")
     try:
-        this_user = User.objects.get(StudentNumber=studentnumber)
+        this_user = User.objects.filter(StudentNumber=studentnumber)
     except:
         return JsonResponse({"status": -1, "msg": "user doesn't exist"})
     if this_user.Password == password:
@@ -40,12 +40,13 @@ def register(request):
     password = data_get.get("password")
 
     this_user = User(Password=password, StudentNumber=studentnumber, PhoneNumber=phonenumber)
+
     try:
-        User.objects.get(StudentNumber=studentnumber)
+        User.objects.filter(StudentNumber=studentnumber)
         return JsonResponse({"data": "注册失败，该学号已被注册"})
     except:
         try:
-            User.objects.get(PhoneNumber=phonenumber)
+            User.objects.filter(PhoneNumber=phonenumber)
             return JsonResponse({"data": "注册失败，该电话已被注册"})
         except:
             this_user.save()
