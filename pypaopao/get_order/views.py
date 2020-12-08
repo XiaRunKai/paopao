@@ -25,7 +25,7 @@ def getorder(request):
                            OrderName=ordername, PhoneNumber=phonenumber)
         this_order.save()
 
-        return JsonResponse({"data": [{"startplace": startplace, "endplace": endplace,
+        return JsonResponse({"data": [{"id":id,"startplace": startplace, "endplace": endplace,
                                       "orderinformation": orderinformation, "ordername": ordername,
                                       "estimateddate": estimateddate, "estimatedtime": estimatedtime,
                                       "price": price, "phonenumber": phonenumber}],"msg": "成功"})

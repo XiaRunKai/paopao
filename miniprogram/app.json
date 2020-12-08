@@ -1,10 +1,9 @@
 {
   "pages": [
-
     "pages/index/index",
     "pages/denglu/denglu",
-    "pages/zhuce/zhuce",
     "pages/pubMsgOfDriver/pubMsgOfDriver",
+    "pages/zhuce/zhuce",
     "pages/personal/personal",
     "pages/publish/publish",
     "pages/kefu/kefu",
@@ -26,10 +25,8 @@
     "pages/declare/declare",
     "pages/discount/discount",
     "pages/invoice/invoice",
-    "pages/recharge/recharge",
-    "pages/refund/refund"
-
-    
+    "pages/dingdanxiangqing/dingdanxiangqing",
+    "pages/recharge/recharge"
   ],
   "window": {
     "backgroundColor": "#7A7A7A",

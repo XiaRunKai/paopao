@@ -250,7 +250,7 @@ this.allorder()
       success:function(res){
         console.log(res)
         that.setData({
-          alreadyOrder:res.data
+        alreadyOrder: res.data
         })
       },
       fail: function(err){
@@ -269,6 +269,22 @@ this.allorder()
       url: '../courseSearch/courseSearchByLoc'
     })
   },
+  orderdetail:function(event){
+    console.log(event)
+    var id=event.currentTarget.dataset.orderid;
+    var ordername=event.currentTarget.dataset.ordername;
+    var date=event.currentTarget.dataset.date;
+    var time=event.currentTarget.dataset.time;
+    var price=event.currentTarget.dataset.price;
+    var start=event.currentTarget.dataset.start;
+    var end=event.currentTarget.dataset.end;
+    var phone=event.currentTarget.dataset.phone;
+    var information=event.currentTarget.dataset.information;
+    console.log(ordername)
+    wx.navigateTo({
+      url: '../dingdanxiangqing/dingdanxiangqing?id='+id+'&ordername='+ordername+'&date='+date+'&time='+time+'&information='+information+'&price='+price+'&start='+start+'&end='+end+'&phone='+phone
+    })
+  }
 
 
 
