@@ -170,7 +170,7 @@ Page({
         time: this.data.time,
         orderinformation:this.data.orderinformation,
         ordername:this.data.ordername,
-        phone: this.data.phonenumber
+        phone: this.data.phone
       },
       success:function(res){
         console.log(res)
@@ -294,21 +294,21 @@ Page({
     }
   },
 
-  // searchAddress: function (e) {
-  //   console.log(e.detail.value)
-  //   demo.getSuggestion({
-  //     keyword: e.detail.value,
-  //     success: function (res) {
-  //       console.log(res);
-  //     },
-  //     fail: function (res) {
-  //       console.log(res);
-  //     },
-  //     complete: function (res) {
-  //       console.log(res);
-  //     }
-  //   });
-  // },
+  searchAddress: function (e) {
+    console.log(e.detail.value)
+    demo.getSuggestion({
+      keyword: e.detail.value,
+      success: function (res) {
+        console.log(res);
+      },
+      fail: function (res) {
+        console.log(res);
+      },
+      complete: function (res) {
+        console.log(res);
+      }
+    });
+  },
   // bindNumChange: function (e) {
   //   console.log(e.detail)
   //   this.setData({
