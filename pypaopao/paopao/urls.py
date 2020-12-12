@@ -16,8 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+import xadmin
+
+xadmin.autodiscover()
+
 urlpatterns = [
     path('trytest/', include('trytest.urls')),
     path('admin/', admin.site.urls),
+    path('xadmin/', xadmin.site.urls),
     path('get_order/', include('get_order.urls')),
 ]

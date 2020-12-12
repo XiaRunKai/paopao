@@ -9,17 +9,15 @@ def index(request):
 
 
 def login(request):
-    if request.method == "POST":
-        data_get = request.POST
+    if request.method == "GET":
+        data_get = request.GET
     else:
         return JsonResponse({"msg": "登录失败"})
 
     studentnumber = data_get.get("studentnumber")
     password = data_get.get("password")
-    try:
-        this_user = User.objects.filter(StudentNumber=studentnumber)
-    except:
-        return JsonResponse({"status": -1, "msg": "user doesn't exist"})
+    this_user = User.objects.filter(StudentNumber=studentnumber).first()
+
     if this_user.Password == password:
         print("2233")
         return JsonResponse({"status": 1, "msg": "登录成功"})
@@ -28,8 +26,8 @@ def login(request):
 
 
 def register(request):
-    if request.method == "POST":
-        data_get = request.POST
+    if request.method == "GET":
+        data_get = request.GET
     else:
         return JsonResponse({"success": 0, "msg": "register failed"})
 
@@ -39,13 +37,10 @@ def register(request):
 
     this_user = User(Password=password, StudentNumber=studentnumber, PhoneNumber=phonenumber)
 
-    try:
-        User.objects.filter(StudentNumber=studentnumber)
+    if User.objects.filter(StudentNumber=studentnumber):
         return JsonResponse({"data": "注册失败，该学号已被注册"})
-    except:
-        try:
-            User.objects.filter(PhoneNumber=phonenumber)
-            return JsonResponse({"data": "注册失败，该电话已被注册"})
-        except:
-            this_user.save()
-            return JsonResponse({"data": "注册成功"})
+    elif User.objects.filter(PhoneNumber=phonenumber):
+        return JsonResponse({"data": "注册失败，该电话已被注册"})
+    else:
+        this_user.save()
+        return JsonResponse({"data": "注册成功"})
