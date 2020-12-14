@@ -131,9 +131,10 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.setData({ 
+    this.setData({
  studentnumber: app.globalData.studentnumber})
   },
+
 
   /**
    * 生命周期函数--监听页面隐藏

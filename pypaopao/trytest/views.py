@@ -20,7 +20,7 @@ def login(request):
 
     if this_user.Password == password:
         print("2233")
-        return JsonResponse({"status": 1, "msg": "登录成功"})
+        return JsonResponse({"status": 1, "msg": "登录成功","studentnumber":studentnumber})
     else:
         return JsonResponse({"status": 0, "msg": "登录失败"})
 

@@ -1,8 +1,9 @@
 <view class='container'>
+  <!-- 微信头像和昵称 -->
   <view class='userinfo-wrapper'>
     <open-data class="userinfo-avatar" type="userAvatarUrl"></open-data>
     <open-data class="userinfo-nickname" type="userNickName" lang="zh_CN"></open-data>
-  
+    学号：{{studentnumber}}
   </view>
   
   <!-- 功能列表 -->
