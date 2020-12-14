@@ -1,8 +1,11 @@
 //app.js
 App({
+<<<<<<< HEAD
   globalData:{
   studentnumber:"未登录"
   },
+=======
+>>>>>>> e2dec52d11571cf129a85ce6a16965e7b74955b1
   onLaunch: function () {
     
     if (!wx.cloud) {

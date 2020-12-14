@@ -247,7 +247,16 @@ this.allorder()
         "content-type": "application/x-www-form-urlencoded"		//使用POST方法要带上这个header
       },
       method: "GET",
+<<<<<<< HEAD
 
+=======
+      success:function(res){
+        console.log(res)
+        that.setData({
+          alreadyOrder:res.data
+        })
+      },
+>>>>>>> e2dec52d11571cf129a85ce6a16965e7b74955b1
       fail: function(err){
         console.log(err)
       }
@@ -264,22 +273,6 @@ this.allorder()
       url: '../courseSearch/courseSearchByLoc'
     })
   },
-  orderdetail:function(event){
-    console.log(event)
-    var id=event.currentTarget.dataset.orderid;
-    var ordername=event.currentTarget.dataset.ordername;
-    var date=event.currentTarget.dataset.date;
-    var time=event.currentTarget.dataset.time;
-    var price=event.currentTarget.dataset.price;
-    var start=event.currentTarget.dataset.start;
-    var end=event.currentTarget.dataset.end;
-    var phone=event.currentTarget.dataset.phone;
-    var information=event.currentTarget.dataset.information;
-    console.log(ordername)
-    wx.navigateTo({
-      url: '../dingdanxiangqing/dingdanxiangqing?id='+id+'&ordername='+ordername+'&date='+date+'&time='+time+'&information='+information+'&price='+price+'&start='+start+'&end='+end+'&phone='+phone
-    })
-  }
 
 
 

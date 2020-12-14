@@ -1,9 +1,16 @@
 {
   "pages": [
+<<<<<<< HEAD
     "pages/denglu/denglu",
     "pages/index/index",
     "pages/pubMsgOfDriver/pubMsgOfDriver",
+=======
+
+    "pages/index/index",
+    "pages/denglu/denglu",
+>>>>>>> e2dec52d11571cf129a85ce6a16965e7b74955b1
     "pages/zhuce/zhuce",
+    "pages/pubMsgOfDriver/pubMsgOfDriver",
     "pages/personal/personal",
     "pages/publish/publish",
     "pages/kefu/kefu",
@@ -25,8 +32,10 @@
     "pages/declare/declare",
     "pages/discount/discount",
     "pages/invoice/invoice",
-    "pages/dingdanxiangqing/dingdanxiangqing",
-    "pages/recharge/recharge"
+    "pages/recharge/recharge",
+    "pages/refund/refund"
+
+    
   ],
   "window": {
     "backgroundColor": "#7A7A7A",

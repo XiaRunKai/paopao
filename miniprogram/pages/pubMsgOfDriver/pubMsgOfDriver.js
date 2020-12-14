@@ -173,8 +173,12 @@ studentnumber:app.globalData.studentnumber})
         time: this.data.time,
         orderinformation:this.data.orderinformation,
         ordername:this.data.ordername,
+<<<<<<< HEAD
         phone: this.data.phone,
         studentnumber: this.data.studentnumber
+=======
+        phone: this.data.phonenumber
+>>>>>>> e2dec52d11571cf129a85ce6a16965e7b74955b1
       },
       success:function(res){
         console.log(res)
@@ -298,21 +302,21 @@ studentnumber:app.globalData.studentnumber})
     }
   },
 
-  searchAddress: function (e) {
-    console.log(e.detail.value)
-    demo.getSuggestion({
-      keyword: e.detail.value,
-      success: function (res) {
-        console.log(res);
-      },
-      fail: function (res) {
-        console.log(res);
-      },
-      complete: function (res) {
-        console.log(res);
-      }
-    });
-  },
+  // searchAddress: function (e) {
+  //   console.log(e.detail.value)
+  //   demo.getSuggestion({
+  //     keyword: e.detail.value,
+  //     success: function (res) {
+  //       console.log(res);
+  //     },
+  //     fail: function (res) {
+  //       console.log(res);
+  //     },
+  //     complete: function (res) {
+  //       console.log(res);
+  //     }
+  //   });
+  // },
   // bindNumChange: function (e) {
   //   console.log(e.detail)
   //   this.setData({

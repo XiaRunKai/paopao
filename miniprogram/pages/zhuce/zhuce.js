@@ -80,7 +80,7 @@ Page({
         phonenumber: this.data.phonenumber
       },
       success:function(res){
-        console.log(res.data)
+        console.log(res)
         wx.showToast({
           icon: 'none',
           title: res.data.data,
