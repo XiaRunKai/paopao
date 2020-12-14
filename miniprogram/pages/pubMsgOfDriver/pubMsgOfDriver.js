@@ -12,7 +12,7 @@ var demo = new QQMapWX({
 const db = wx.cloud.database({
   env: 'test-f41d36'
 })
-
+const app = getApp()
 const searchObj = {}
 
 Page({
@@ -41,6 +41,7 @@ Page({
     phone:'',
     ordername:'',
     orderinformation:'',
+    studentnumber:''
   },
 
   inputprice: function(e){	
@@ -130,7 +131,8 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.setData({ 
+ studentnumber: app.globalData.studentnumber})
   },
 
   /**
@@ -170,7 +172,8 @@ Page({
         time: this.data.time,
         orderinformation:this.data.orderinformation,
         ordername:this.data.ordername,
-        phone: this.data.phonenumber
+        phone: this.data.phone,
+        studentnumber: this.data.studentnumber
       },
       success:function(res){
         console.log(res)
@@ -294,21 +297,21 @@ Page({
     }
   },
 
-  // searchAddress: function (e) {
-  //   console.log(e.detail.value)
-  //   demo.getSuggestion({
-  //     keyword: e.detail.value,
-  //     success: function (res) {
-  //       console.log(res);
-  //     },
-  //     fail: function (res) {
-  //       console.log(res);
-  //     },
-  //     complete: function (res) {
-  //       console.log(res);
-  //     }
-  //   });
-  // },
+  searchAddress: function (e) {
+    console.log(e.detail.value)
+    demo.getSuggestion({
+      keyword: e.detail.value,
+      success: function (res) {
+        console.log(res);
+      },
+      fail: function (res) {
+        console.log(res);
+      },
+      complete: function (res) {
+        console.log(res);
+      }
+    });
+  },
   // bindNumChange: function (e) {
   //   console.log(e.detail)
   //   this.setData({

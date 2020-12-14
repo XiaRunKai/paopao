@@ -25,7 +25,7 @@
  <image  width="335" height="150" mode='widthFix' class='img' src=" ../../images/mima.jpg"></image></swiper-item>
  
 </swiper> -->
-  <!-- 线路汇总信息 -->
+  <!-- 我的订单 -->
   <view bindtap='bindToCourseSearch' class='course-total'>
     <view class='course-total-top'>
       <label style='font-size:32rpx;font-weight:bold;'>
@@ -42,7 +42,7 @@
     </view> -->
   </view>
 <scroll-view class="hot-box" scroll-y="true">
-<view class="orderDetails" wx:for="{{alreadyOrder}}" wx:key=" ">
+<view class="orderDetails" wx:for="{{alreadyOrder}}" catchtap="orderdetail" data-orderid="{{index}}"  data-ordername="{{item.OrderName}}" data-date="{{item.EstimatedDate}}" data-time="{{item.EstimatedTime}}"  data-price="{{item.Price}}" data-start="{{item.StartPlace}}" data-end="{{item.EndPlace}}" data-information="{{item.OrderInformation}}"  data-phone="{{item.PhoneNumber}}" wx:key="" >
 <view class="orderListTitle">
 <text class="userName">{{item.OrderName}}</text>
 <text class="orderStatus">{{item.state}}</text>
