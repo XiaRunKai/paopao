@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/denglu/denglu",
+    "pages/index/index",
     "pages/pubMsgOfDriver/pubMsgOfDriver",
     "pages/zhuce/zhuce",
     "pages/personal/personal",

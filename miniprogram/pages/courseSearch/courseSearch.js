@@ -6,7 +6,7 @@ Page({
    */
   data: {
     currtab: 0,
-swipertab: [{ name: '已完成', index: 0 }, { name: '待付款', index: 1 }, { name: '已取消', index: 2 }],
+swipertab: [{ name: '我的下单', index: 0 }, { name: '我的接单', index: 1 }, { name: '已取消', index: 2 }],
     endRegion: [],
     startRegion: [],
     showType: 0
@@ -134,77 +134,113 @@ lostOrder: [{ name: "书包", state: "未接收", time: "2020-10-4 12:00", statu
   onShareAppMessage: function () {
 
   },
-
-  getCourseByDistrict: function () {
-    let _this = this;
-
-    // 加载动画
-    wx.showLoading({
-      title: '加载中...',
-    })
-    // 调用云函数，更新统计数据
-    wx.cloud.callFunction({
-      name: 'getCourseByDistrict',
-      data: {
-        start: {
-          city: _this.data.startRegion[1],
-          district: _this.data.startRegion[2],
-        },
-        end: {
-          city: _this.data.endRegion[1],
-          district: _this.data.endRegion[2],
-        },
-        showType: _this.data.showType
+  myxorder: function(e){		//与服务器进行交互
+    wx.request({
+      url: "http://127.0.0.1:8000/get_order/getorder/" ,	//获取服务器地址，此处为本地地址
+      header:{
+        "content-type": "application/x-www-form-urlencoded"		//使用POST方法要带上这个header
       },
-    }).then(res => {
-      _this.setData({
-        courseList: res.result.data
-      })
-      setTimeout(function () {
-        wx.hideLoading()
-      }, 500);
-      console.log(res)
-    }).catch(console.error)
-  },
-
-  bindEndRegionChange: function (e) {
-    this.setData({
-      endRegion: e.detail.value
-    })
-    if (this.data.startRegion.length > 0) {
-      this.getCourseByDistrict();
-    }
-  },
-
-  bindStaRegionChange: function (e) {
-    this.setData({
-      startRegion: e.detail.value
-    })
-    if (this.data.endRegion.length > 0) {
-      this.getCourseByDistrict();
-    }
-  },
-
-  bindGoDetail: function (e) {
-    let course = e.currentTarget.dataset.course
-    wx.navigateTo({
-      url: '../courseDetail/courseDetail?course=' + JSON.stringify(course)
+      method: "GET",
+      success:function(res){
+        console.log(res)
+        that.setData({
+        myxorder: res.data
+        })
+      },
+      fail: function(err){
+        console.log(err)
+      }
     })
   },
-
-  _getDriverCourse: function () {
-    this.setData({
-      showType: 1
-    })  
-    this.getCourseByDistrict();
-  },
-
-  _getPassengerCourse: function () {
-    console.log('点击乘客')
-    this.setData({
-      showType: 0
-    })  
-    this.getCourseByDistrict();
+  myjorder: function(e){		//与服务器进行交互
+    wx.request({
+      url: "http://127.0.0.1:8000/get_order/getorder/" ,	//获取服务器地址，此处为本地地址
+      header:{
+        "content-type": "application/x-www-form-urlencoded"		//使用POST方法要带上这个header
+      },
+      method: "GET",
+      success:function(res){
+        console.log(res)
+        that.setData({
+        myjorder: res.data
+        })
+      },
+      fail: function(err){
+        console.log(err)
+      }
+    })
   }
+
+  // getCourseByDistrict: function () {
+  //   let _this = this;
+
+  //   // 加载动画
+  //   wx.showLoading({
+  //     title: '加载中...',
+  //   })
+  //   // 调用云函数，更新统计数据
+  //   wx.cloud.callFunction({
+  //     name: 'getCourseByDistrict',
+  //     data: {
+  //       start: {
+  //         city: _this.data.startRegion[1],
+  //         district: _this.data.startRegion[2],
+  //       },
+  //       end: {
+  //         city: _this.data.endRegion[1],
+  //         district: _this.data.endRegion[2],
+  //       },
+  //       showType: _this.data.showType
+  //     },
+  //   }).then(res => {
+  //     _this.setData({
+  //       courseList: res.result.data
+  //     })
+  //     setTimeout(function () {
+  //       wx.hideLoading()
+  //     }, 500);
+  //     console.log(res)
+  //   }).catch(console.error)
+  // },
+
+  // bindEndRegionChange: function (e) {
+  //   this.setData({
+  //     endRegion: e.detail.value
+  //   })
+  //   if (this.data.startRegion.length > 0) {
+  //     this.getCourseByDistrict();
+  //   }
+  // },
+
+  // bindStaRegionChange: function (e) {
+  //   this.setData({
+  //     startRegion: e.detail.value
+  //   })
+  //   if (this.data.endRegion.length > 0) {
+  //     this.getCourseByDistrict();
+  //   }
+  // },
+
+  // bindGoDetail: function (e) {
+  //   let course = e.currentTarget.dataset.course
+  //   wx.navigateTo({
+  //     url: '../courseDetail/courseDetail?course=' + JSON.stringify(course)
+  //   })
+  // },
+
+  // _getDriverCourse: function () {
+  //   this.setData({
+  //     showType: 1
+  //   })  
+  //   this.getCourseByDistrict();
+  // },
+
+  // _getPassengerCourse: function () {
+  //   console.log('点击乘客')
+  //   this.setData({
+  //     showType: 0
+  //   })  
+  //   this.getCourseByDistrict();
+  // }
   
 })

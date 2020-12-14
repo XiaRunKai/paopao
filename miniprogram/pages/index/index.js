@@ -247,12 +247,7 @@ this.allorder()
         "content-type": "application/x-www-form-urlencoded"		//使用POST方法要带上这个header
       },
       method: "GET",
-      success:function(res){
-        console.log(res)
-        that.setData({
-        alreadyOrder: res.data
-        })
-      },
+
       fail: function(err){
         console.log(err)
       }

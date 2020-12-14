@@ -31,6 +31,8 @@ Page({
       },
       success:function(res){
         console.log(res)
+        app.globalData.studentnumber=res.data.studentnumber
+        console.log(app.globalData.studentnumber)
         wx.showToast({
           title: res.data.msg,
         })

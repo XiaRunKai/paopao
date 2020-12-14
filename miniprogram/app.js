@@ -1,7 +1,7 @@
 //app.js
 App({
   globalData:{
-
+  studentnumber:"未登录"
   },
   onLaunch: function () {
     

@@ -12,7 +12,7 @@ var demo = new QQMapWX({
 const db = wx.cloud.database({
   env: 'test-f41d36'
 })
-
+const app = getApp()
 const searchObj = {}
 
 Page({
@@ -41,6 +41,7 @@ Page({
     phone:'',
     ordername:'',
     orderinformation:'',
+    studentnumber:''
   },
 
   inputprice: function(e){	
@@ -130,8 +131,10 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.setData({
+studentnumber:app.globalData.studentnumber})
   },
+
 
   /**
    * 生命周期函数--监听页面隐藏
@@ -170,7 +173,8 @@ Page({
         time: this.data.time,
         orderinformation:this.data.orderinformation,
         ordername:this.data.ordername,
-        phone: this.data.phone
+        phone: this.data.phone,
+        studentnumber: this.data.studentnumber
       },
       success:function(res){
         console.log(res)
