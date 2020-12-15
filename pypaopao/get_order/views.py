@@ -4,6 +4,7 @@ from django.http import JsonResponse
 from django.shortcuts import render
 
 from get_order.models import Order
+from trytest.models import User
 
 
 def getorder(request):
@@ -25,13 +26,36 @@ def getorder(request):
                            OrderName=ordername, X_PhoneNumber=x_phonenumber, X_StudentNumber=x_studentnumber)
         this_order.save()
 
-        return JsonResponse({"data": [{"id": id, "startplace": startplace, "endplace": endplace,
+        return JsonResponse({"data": [{"id": this_order.id, "startplace": startplace, "endplace": endplace,
                                        "orderinformation": orderinformation, "ordername": ordername,
                                        "estimateddate": estimateddate, "estimatedtime": estimatedtime,
-                                       "price": price, "phonenumber": x_phonenumber}], "msg": "成功"})
+                                       "price": price, "phonenumber": x_phonenumber}],
+                             "msg": "成功"})
 
     else:
         return JsonResponse({"msg": "订单提交失败"})
+
+
+def acceptorder(request):
+    if request.method == "GET":
+        order_get = request.GET
+
+        j_studentnumber = order_get.get("studentnumber")
+        orderid = order_get.get("orderid")
+        this_person = User.objects.get(StudentNumber=j_studentnumber)
+        j_phonenumber = this_person.PhoneNumber
+
+        this_order = Order.objects.get(id=orderid)
+        this_order.J_StudentNumber = j_studentnumber
+        this_order.J_PhoneNumber = j_phonenumber
+        this_order.OrderStatus = "已接受"
+
+        this_order.save()
+
+        return JsonResponse({"msg": "接单成功！"})
+
+    else:
+        return JsonResponse({"msg": "接单失败！"})
 
 
 def allorder(request):
@@ -41,10 +65,18 @@ def allorder(request):
 
 
 def my_x_order(request):
-    if request.method == "GET":
-        order_get = request.GET
+    order_get = request.GET
 
-        studentnumber = order_get.get("studentnumber")
-        my_x_orders = Order.objects.filter(X_StudentNumber=studentnumber).values()
-        my_x_order = list(my_x_orders)
-        return JsonResponse(my_x_order, safe=False)
+    studentnumber = order_get.get("studentnumber")
+    my_x_orders = Order.objects.filter(X_StudentNumber=studentnumber).values()
+    my_x_ords = list(my_x_orders)
+    return JsonResponse(my_x_ords, safe=False)
+
+
+def my_j_order(request):
+    order_get = request.GET
+
+    studentnumber = order_get.get("studentnumber")
+    my_j_orders = Order.objects.filter(J_StudentNumber=studentnumber).values()
+    my_j_ords = list(my_j_orders)
+    return JsonResponse(my_j_ords, safe=False)

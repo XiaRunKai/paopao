@@ -8,7 +8,7 @@ class Order(models.Model):
     J_StudentNumber = models.CharField(max_length=13, default='null', verbose_name='接单者学号')
     EstimatedDate = models.DateField(verbose_name='期望日期')
     EstimatedTime = models.TimeField(verbose_name='期望时间')
-    OrderDtae = models.DateField(auto_now_add=True, verbose_name='下单日期')
+    OrderDate = models.DateField(auto_now_add=True, verbose_name='下单日期')
     OrderTime = models.TimeField(auto_now_add=True, verbose_name='下单时间')
     Price = models.FloatField(verbose_name='价格')
     OrderName = models.CharField(max_length=20, verbose_name='订单名称')
